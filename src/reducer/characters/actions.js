@@ -4,11 +4,11 @@ export const SET_CHARACTERS = 'SET_CHARACTERS';
 
 export function getCharacters() {
   return dispatch => {
-    fetch('$API_URL)/people')
+    fetch(`$API_URL'/people'`)
       .then(res => res.Json())
       .then(res => res.results)
       .then(characters =>
-        dispatch(setCharacters(characters));
+        dispatch(setCharacters(characters))
       );
   };
 }
